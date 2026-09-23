@@ -1,0 +1,13 @@
+{
+  "source": "built_in_2022_water_calibration",
+  "calibration_year": 2022,
+  "frozen_validation_year": 2023,
+  "rain_efficiency": 1.0,
+  "irrigation_efficiency": 0.8915783407037171,
+  "et_scale": 0.9586557067798288,
+  "drainage_fraction": 0.05,
+  "water_stress_threshold": 0.6579627613886836,
+  "water_stress_slope": 2.932634170384998,
+  "et_model": "radiation",
+  "lai_model": "sine"
+}

@@ -1,0 +1,35 @@
+{
+  "description": "Raw formal gradient audits are preserved by seed.",
+  "seeds": {
+    "42": {
+      "keys": [
+        "status",
+        "checkpoint",
+        "seed",
+        "test_samples",
+        "audit"
+      ],
+      "source_file": "gradient_seed42.json"
+    },
+    "43": {
+      "keys": [
+        "status",
+        "checkpoint",
+        "seed",
+        "test_samples",
+        "audit"
+      ],
+      "source_file": "gradient_seed43.json"
+    },
+    "44": {
+      "keys": [
+        "status",
+        "checkpoint",
+        "seed",
+        "test_samples",
+        "audit"
+      ],
+      "source_file": "gradient_seed44.json"
+    }
+  }
+}

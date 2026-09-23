@@ -1,0 +1,67 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "common": {
+    "cache": "user-supplied; see data/README.md",
+    "batch_size": 1024,
+    "hidden": 32,
+    "use_nutrients": true,
+    "fixed_yield_coefficient": 0.42305775,
+    "maturity_gdd": 2600.0
+  },
+  "variants": {
+    "strong_environment": {
+      "entry": "src/ablation/strong_environment.py",
+      "epochs": 15,
+      "patience": 4,
+      "learning_rate": 0.001
+    },
+    "direct_irrigation": {
+      "entry": "src/ablation/direct_irrigation.py",
+      "epochs": 15,
+      "patience": 4,
+      "learning_rate": 0.001
+    },
+    "process_gate_v13": {
+      "entry": "src/ablation/process_gate_v13.py",
+      "epochs": 30,
+      "patience": 8,
+      "learning_rate": 0.0005
+    },
+    "dsgr_v16": {
+      "entry": "src/dsgr_net.py",
+      "epochs": 30,
+      "patience": 8,
+      "learning_rate": 0.0005
+    },
+    "gradient_informed": {
+      "entry": "src/ablation/gradient_informed.py",
+      "epochs": 30,
+      "patience": 8,
+      "learning_rate": 0.001
+    },
+    "temporal_cnn": {
+      "entry": "src/ablation/temporal_cnn.py",
+      "epochs": 30,
+      "patience": 8,
+      "learning_rate": 0.001,
+      "backbone": "cnn"
+    },
+    "multiscale_process": {
+      "entry": "src/ablation/multiscale_process.py",
+      "epochs": 30,
+      "patience": 8,
+      "learning_rate": 0.001
+    },
+    "hybrid_nn_cnn": {
+      "entry": "src/ablation/hybrid_nn_cnn.py",
+      "epochs": 30,
+      "patience": 8,
+      "learning_rate": 0.001,
+      "backbone": "hybrid"
+    }
+  }
+}
