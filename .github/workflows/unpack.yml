@@ -1,0 +1,27 @@
+name: Unpack initial release
+
+on:
+  push:
+    paths:
+      - DSGR-Net-release.tar.gz
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Expand release package
+        run: |
+          tar -xzf DSGR-Net-release.tar.gz
+          rm DSGR-Net-release.tar.gz
+          rm -f .github/workflows/unpack.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Initial open-source release of DSGR-Net'
+          git push
